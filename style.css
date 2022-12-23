@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --color-1: hsl(217, 19%, 35%);
+  --color-2: hsl(214, 17%, 51%);
+  --color-3: hsl(212, 23%, 69%);
+  --color-4: hsl(210, 46%, 95%);
+  --font-family: "Manrope", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-4);
+  min-height: 100vh;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 380px 650px;
+  max-width: 1000px;
+  max-height: 400px;
+  border-radius: 1rem;
+}
+
+.main__container-img img {
+  height: 450px;
+  border-radius: 1rem;
+}
+
+.main__container-content {
+  max-height: 450px;
+  padding: 4rem;
+  background-color: white;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.main__container-content h1 {
+  font-size: 1.8rem;
+}
+
+.main__container-content h1,
+.name h2 {
+  color: var(--color-1);
+}
+
+.main__container-content h1,
+.main__container-content p {
+  margin-bottom: 1rem;
+}
+
+.main__container-content p {
+  color: var(--color-2);
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+}
+
+.main__container-content-name {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.author {
+  display: flex;
+  gap: 1rem;
+}
+
+.avatar {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.name h2 {
+  font-size: 1rem;
+}
+
+.name small {
+  color: var(--color-3);
+}
+
+.share_btn {
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.bg {
+  background-color: var(--color-1);
+}
+
+.share_btn_2{
+  display: none;
+}
+
+.social_pop_up.show {
+  display: flex;
+  bottom: 0;
+}
+
+.social_pop_up {
+  position: absolute;
+  top: -75px;
+  left: 348px;
+  width: 60%;
+  height: 60px;
+  display: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: var(--color-4);
+  background-color: var(--color-1);
+  border-radius: 10px;
+}
+
+.social_pop_up img {
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+
+.social_pop_up:after {
+  content: "";
+  top: 50px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background: var(--color-1);
+  position: absolute;
+}
+
+@media screen and (max-width: 1300px) {
+  .main__container {
+    max-width: 900px;
+    max-height: 350px;
+    grid-template-columns: 40% 60%;
+  }
+
+  .main__container-img img {
+    height: 350px;
+  }
+
+  .main__container-content {
+    max-height: 350px;
+    padding: 2.5rem;
+  }
+
+  .main__container-content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .main__container-content-name {
+    margin-top: 2rem;
+  }
+
+  .avatar {
+    height: 40px;
+  }
+
+  .name h2 {
+    font-size: 0.9rem;
+  }
+
+  .social_pop_up {
+    left: 305px;
+    font-size: 0.9rem;
+  }
+}
+
+
+@media screen and (max-width: 1000px){
+
+    .main__container{
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 350px;
+      max-height: 1000px;
+    }
+
+    .main__container-img{
+      height: 250px;
+    }
+
+    .main__container-img img{
+      height: 300px;
+      max-width: 350px;
+    }
+
+    .main__container-content{
+      max-width: 350px;
+      border-radius: 0 0 0.5rem 0.5rem;
+      padding: 2rem 2rem 1.5rem 2rem;
+    }
+
+    .main__container-content h1{
+      font-size: 1.2rem;
+    }
+
+    .social_pop_up {
+      position: absolute;
+      top: 0px;
+      left: -30px;
+      width: 350px;
+      height: 70px;
+      display: none;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      color: var(--color-4);
+      background-color: var(--color-1);
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .social_logo{
+      margin-left: 0rem;
+    }
+
+    .social_pop_up:after {
+      display: none;
+    }
+
+    .share_btn_2{
+      display: block;
+      padding: 0.5rem;
+      border: none;
+      cursor: pointer;
+      border-radius:50%;
+      height: 40px;
+      background-color: var(--color-2);
+    }
+}
